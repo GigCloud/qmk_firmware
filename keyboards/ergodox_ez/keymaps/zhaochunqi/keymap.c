@@ -49,14 +49,14 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox_pretty(
-    LGUI(KC_TAB),   KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_LEFT,                                        KC_RIGHT,       KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_BSPACE,
-    KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_BSPACE,                                      LCA_T(KC_NO),   KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLASH,
+    KC_ESCAPE,      KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_LEFT,                                        KC_RIGHT,       KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_BSPACE,
+    KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_BSPACE,                                      LCTL(KC_LALT),  KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLASH,
     LCTL_T(KC_ESCAPE),KC_A,           KC_S,           KC_D,           KC_F,           KC_G,                                                                           KC_H,           KC_J,           KC_K,           KC_L,           LT(2,KC_SCOLON),RCTL_T(KC_ENTER),
-    KC_LSHIFT,      LGUI_T(KC_Z),   KC_X,           KC_C,           KC_V,           KC_B,           LSA_T(KC_NO),                                   KC_HYPR,        KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       LSFT_T(KC_QUOTE),
+    KC_LSHIFT,      LGUI_T(KC_Z),   KC_X,           KC_C,           KC_V,           KC_B,           LSA_T(KC_NO),                                   KC_HYPR,        KC_N,           KC_M,           KC_COMMA,       KC_DOT,         LT(3,KC_SLASH), LSFT_T(KC_QUOTE),
     KC_LALT,        KC_LCTRL,       KC_LSHIFT,      KC_LGUI,        LT(1,KC_GRAVE),                                                                                                 LT(1,KC_MINUS), KC_LGUI,        KC_LBRACKET,    KC_RBRACKET,    KC_RALT,
                                                                                                     KC_AUDIO_VOL_UP,KC_AUDIO_VOL_DOWN,KC_PGDOWN,      KC_PGUP,
                                                                                                                     OSL(4),         KC_END,
-                                                                                    C_S_T(KC_SPACE),KC_HYPR,        TT(5),          LT(1,KC_HOME),  MT(MOD_MEH, KC_BSPACE),SCMD_T(KC_ENTER)
+                                                                                    C_S_T(KC_SPACE),KC_HYPR,        TT(3),          LT(1,KC_HOME),  MT(MOD_MEH, KC_BSPACE),SCMD_T(KC_ENTER)
   ),
   [1] = LAYOUT_ergodox_pretty(
     TO(0),          KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_F13,                                         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_MINUS,       KC_EQUAL,       KC_F11,
@@ -77,6 +77,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                                     KC_MS_BTN1,     KC_MS_BTN3,     KC_TRANSPARENT, KC_TRANSPARENT,
                                                                                                                     KC_MS_BTN2,     KC_TRANSPARENT,
                                                                                     KC_MS_WH_UP,    KC_MS_WH_DOWN,  KC_MS_BTN1,     KC_TRANSPARENT, KC_MS_BTN1,     KC_MS_BTN2
+  ),
+  [3] = LAYOUT_ergodox_pretty(
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_LBRACKET,    KC_RBRACKET,    KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_LCBR,        KC_RCBR,        KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_LPRN,        KC_RPRN,                                                                                                        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
+                                                                                                                    KC_TRANSPARENT, KC_TRANSPARENT,
+                                                                                    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
 };
 
